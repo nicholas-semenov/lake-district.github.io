@@ -1,0 +1,107 @@
+/* style.css */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.hero-gradient {
+    background: linear-gradient(135deg, rgba(16, 56, 40, 0.85) 0%, rgba(30, 111, 74, 0.70) 50%, rgba(0, 0, 0, 0.5) 100%);
+}
+
+.card-hover {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.parallax-bg {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.nav-scrolled {
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(12px) !important;
+    border-bottom: 1px solid rgba(0,0,0,0.05) !important;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+}
+
+.nav-scrolled .text-white {
+    color: #111827 !important; /* Gray-900 */
+}
+
+.nav-scrolled .text-gray-200 {
+    color: #4b5563 !important; /* Gray-600 */
+}
+
+.nav-scrolled .text-gray-200:hover {
+    color: #2d8b5e !important; /* Lake-500 */
+}
+
+.nav-scrolled [data-lucide="menu"] {
+    color: #111827 !important;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px) translateX(-50%); }
+    50% { transform: translateY(-15px) translateX(-50%); }
+}
+
+.float-animation {
+    animation: float 3s ease-in-out infinite;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: #f3f4f6;
+    border-radius: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #2d8b5e;
+    border-radius: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #1e6f4a;
+}
+
+/* Gallery Styles */
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.gallery-item img {
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-item .overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%, transparent 100%);
+    padding: 1.5rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .overlay {
+    opacity: 1;
+}
