@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        display: ['Montserrat', 'sans-serif'],
+                        body: ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        'lake': {
+                            50: '#f0f9f4',
+                            100: '#d8f0e3',
+                            200: '#b3e0c8',
+                            300: '#7dc8a3',
+                            400: '#4aab7d',
+                            500: '#2d8b5e',
+                            600: '#1e6f4a',
+                            700: '#18593b',
+                            800: '#144730',
+                            900: '#103828',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>About | Lake District National Park</title>
+</head>
+<body class="font-body bg-gray-50">
+    
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white/10 backdrop-blur-sm border-b border-white/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex items-center space-x-3 group">
+                    <div class="w-12 h-12 bg-lake-500 rounded-xl flex items-center justify-center transform group-hover:scale-105 transition-transform">
+                        <i data-lucide="mountain-snow" class="w-7 h-7 text-white"></i>
+                    </div>
+                    <span class="text-2xl font-bold text-white font-display tracking-wide">Lake District</span>
+                </a>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-200 hover:text-white transition-colors duration-200 font-medium">Home</a>
+<a href="about.html" class="text-lake-400 transition-colors duration-200 font-medium">About</a>
+<a href="activities.html" class="text-gray-200 hover:text-white transition-colors duration-200 font-medium">Activities</a>
+<a href="gallery.html" class="text-gray-200 hover:text-white transition-colors duration-200 font-medium">Gallery</a>
+<a href="contact.html" class="text-gray-200 hover:text-white transition-colors duration-200 font-medium">Plan Visit</a>
+
+                    <a href="contact.html" class="bg-lake-500 hover:bg-lake-600 text-white px-7 py-2.5 rounded-full font-medium transition-all duration-200 transform hover:scale-105 shadow-lg shadow-lake-500/30">
+                        Contact Us
+                    </a>
+                </div>
+
+                <button id="mobile-menu-btn" class="md:hidden text-white hover:text-lake-300 transition-colors">
+                    <i data-lucide="menu" class="w-8 h-8"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-2xl absolute w-full left-0 border-t border-gray-100">
+            <div class="px-4 py-4 space-y-2">
+                <a href="index.html" class="block px-4 py-3 rounded-lg text-gray-800 hover:text-lake-600 hover:bg-gray-50 transition-colors">Home</a>
+<a href="about.html" class="block px-4 py-3 rounded-lg text-lake-600 font-bold bg-lake-50 transition-colors">About</a>
+<a href="activities.html" class="block px-4 py-3 rounded-lg text-gray-800 hover:text-lake-600 hover:bg-gray-50 transition-colors">Activities</a>
+<a href="gallery.html" class="block px-4 py-3 rounded-lg text-gray-800 hover:text-lake-600 hover:bg-gray-50 transition-colors">Gallery</a>
+<a href="contact.html" class="block px-4 py-3 rounded-lg text-gray-800 hover:text-lake-600 hover:bg-gray-50 transition-colors">Plan Visit</a>
+
+                <a href="contact.html" class="block text-center w-full bg-lake-500 hover:bg-lake-600 text-white px-4 py-3 rounded-xl font-medium transition-colors mt-4 shadow-md">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </nav>
+    
+
+    <section class="relative h-[60vh] flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0 parallax-bg" style="background-image: url('images/hero-about.jpg')">
+            <div class="absolute inset-0 hero-gradient"></div>
+        </div>
+        <div class="relative z-10 text-center text-white px-4 mt-20" data-aos="fade-up">
+            <h1 class="text-5xl md:text-7xl font-display font-bold mb-4 drop-shadow-lg">Our Story</h1>
+            <p class="text-xl md:text-2xl text-white font-light max-w-2xl mx-auto drop-shadow-lg">A landscape shaped by nature, centuries of farming, and literary inspiration.</p>
+        </div>
+    </section>
+
+    <section class="py-24 bg-white relative z-20 -mt-8 rounded-t-[3rem] shadow-[0_-10px_40px_rgba(0,0,0,0.1)]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
+                <div data-aos="fade-right">
+                    <h2 class="text-4xl md:text-5xl font-display font-bold text-gray-900 mb-6">A World Heritage Site</h2>
+                    <div class="w-20 h-1 bg-lake-500 mb-8 rounded-full"></div>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        The Lake District National Park is located in Cumbria, in the north-west of England. Covering an area of 2,362 square kilometres, it is the largest national park in England and the second largest in the United Kingdom, after the Cairngorms National Park in Scotland.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                        The park was officially established on 9 May 1951, just one month after the Peak District became the UK's first national park. In 2017, it was awarded UNESCO World Heritage Site status, recognising it as a cultural landscape of global importance — shaped not only by nature, but by thousands of years of farming traditions and human settlement.
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <div class="flex items-center space-x-3 text-gray-800 bg-gray-50 p-4 rounded-xl">
+                            <i data-lucide="award" class="w-6 h-6 text-lake-500"></i>
+                            <span class="font-semibold">UNESCO Status (2017)</span>
+                        </div>
+                        <div class="flex items-center space-x-3 text-gray-800 bg-gray-50 p-4 rounded-xl">
+                            <i data-lucide="users" class="w-6 h-6 text-lake-500"></i>
+                            <span class="font-semibold">18M+ Annual Visitors (2023)</span>
+                        </div>
+                        <div class="flex items-center space-x-3 text-gray-800 bg-gray-50 p-4 rounded-xl">
+                            <i data-lucide="calendar" class="w-6 h-6 text-lake-500"></i>
+                            <span class="font-semibold">Established 1951</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative" data-aos="fade-left">
+                    <div class="absolute inset-0 bg-lake-200 rounded-3xl transform translate-x-4 translate-y-4"></div>
+                    <img src="images/gal-sheep.jpg" alt="Traditional Herdwick sheep grazing on a misty fell slope, Lake District, Cumbria" class="relative z-10 rounded-3xl shadow-xl w-full object-cover h-[500px]">
+                    <p class="relative z-10 text-xs text-gray-400 mt-2 text-center">Photo: Aneta Foubíková / Unsplash</p>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-100 pt-24" data-aos="fade-up">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-display font-bold text-gray-900 mb-4">Key Milestones</h2>
+                    <p class="text-xl text-gray-600">The journey of our National Park</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-gray-50 p-8 rounded-3xl border border-gray-100 card-hover relative overflow-hidden group">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-lake-100 rounded-bl-full -mr-16 -mt-16 transition-transform group-hover:scale-110"></div>
+                        <h3 class="text-5xl font-display font-bold text-lake-500 mb-4 relative z-10">1951</h3>
+                        <h4 class="text-xl font-bold text-gray-900 mb-3 relative z-10">Park Established</h4>
+                        <p class="text-gray-600 relative z-10">Designated as a National Park to protect its outstanding landscape for future generations.</p>
+                    </div>
+                    <div class="bg-gray-50 p-8 rounded-3xl border border-gray-100 card-hover relative overflow-hidden group">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-lake-100 rounded-bl-full -mr-16 -mt-16 transition-transform group-hover:scale-110"></div>
+                        <h3 class="text-5xl font-display font-bold text-lake-500 mb-4 relative z-10">2017</h3>
+                        <h4 class="text-xl font-bold text-gray-900 mb-3 relative z-10">UNESCO Status</h4>
+                        <p class="text-gray-600 relative z-10">Awarded World Heritage status, recognizing it as a cultural landscape of global importance.</p>
+                    </div>
+                    <div class="bg-gray-50 p-8 rounded-3xl border border-gray-100 card-hover relative overflow-hidden group">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-lake-100 rounded-bl-full -mr-16 -mt-16 transition-transform group-hover:scale-110"></div>
+                        <h3 class="text-5xl font-display font-bold text-lake-500 mb-4 relative z-10">Today</h3>
+                        <h4 class="text-xl font-bold text-gray-900 mb-3 relative z-10">Conservation</h4>
+                        <p class="text-gray-600 relative z-10">Ongoing efforts to balance tourism, traditional farming, and wildlife conservation.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Natural Records -->
+            <div class="border-t border-gray-100 pt-24" data-aos="fade-up">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-display font-bold text-gray-900 mb-4">Natural Records</h2>
+                    <p class="text-xl text-gray-600">England's remarkable natural achievements, all in one place</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-lake-50 p-6 rounded-2xl border border-lake-100">
+                        <i data-lucide="mountain-snow" class="w-8 h-8 text-lake-500 mb-3"></i>
+                        <h4 class="font-bold text-gray-900 mb-1">Scafell Pike (978 m)</h4>
+                        <p class="text-gray-600 text-sm">The highest mountain in England.</p>
+                    </div>
+                    <div class="bg-lake-50 p-6 rounded-2xl border border-lake-100">
+                        <i data-lucide="waves" class="w-8 h-8 text-lake-500 mb-3"></i>
+                        <h4 class="font-bold text-gray-900 mb-1">Windermere</h4>
+                        <p class="text-gray-600 text-sm">England's longest lake at 10.5 miles (17 km).</p>
+                    </div>
+                    <div class="bg-lake-50 p-6 rounded-2xl border border-lake-100">
+                        <i data-lucide="droplets" class="w-8 h-8 text-lake-500 mb-3"></i>
+                        <h4 class="font-bold text-gray-900 mb-1">Wastwater</h4>
+                        <p class="text-gray-600 text-sm">England's deepest lake at 74 metres.</p>
+                    </div>
+                    <div class="bg-lake-50 p-6 rounded-2xl border border-lake-100">
+                        <i data-lucide="info" class="w-8 h-8 text-lake-500 mb-3"></i>
+                        <h4 class="font-bold text-gray-900 mb-1">One Official Lake</h4>
+                        <p class="text-gray-600 text-sm">Only Bassenthwaite Lake is officially a "lake" — all others are "meres" or "waters".</p>
+                    </div>
+                    <div class="bg-lake-50 p-6 rounded-2xl border border-lake-100">
+                        <i data-lucide="map-pin" class="w-8 h-8 text-lake-500 mb-3"></i>
+                        <h4 class="font-bold text-gray-900 mb-1">26 Miles of Coastline</h4>
+                        <p class="text-gray-600 text-sm">The park includes 42 km of coastline and estuaries.</p>
+                    </div>
+                    <div class="bg-lake-50 p-6 rounded-2xl border border-lake-100">
+                        <i data-lucide="footprints" class="w-8 h-8 text-lake-500 mb-3"></i>
+                        <h4 class="font-bold text-gray-900 mb-1">214 Wainwright Fells</h4>
+                        <p class="text-gray-600 text-sm">At least 200 fell tops, with writer Alfred Wainwright famously documenting 214.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Literary Heritage -->
+            <div class="border-t border-gray-100 pt-24 mt-8" data-aos="fade-up">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <h2 class="text-4xl font-display font-bold text-gray-900 mb-6">Literary &amp; Cultural Heritage</h2>
+                        <div class="w-20 h-1 bg-lake-500 mb-8 rounded-full"></div>
+                        <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                            The Lake District has long inspired writers, poets, and artists. William Wordsworth, born in Cockermouth and buried in Grasmere churchyard, described the region as a kind of national property that should be open to all. His former home, Dove Cottage in Grasmere, is open to visitors.
+                        </p>
+                        <p class="text-lg text-gray-600 leading-relaxed">
+                            Beatrix Potter, the author and illustrator of <em>The Tale of Peter Rabbit</em>, lived at Hill Top farmhouse in the village of Near Sawrey. Managed today by the National Trust, Hill Top is one of the most visited sites in the park. The area also inspired the Romantic poet Samuel Taylor Coleridge and the artist John Ruskin.
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-1 gap-4">
+                        <div class="flex items-start gap-4 bg-gray-50 p-6 rounded-2xl">
+                            <i data-lucide="book-open" class="w-8 h-8 text-lake-500 shrink-0 mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-gray-900 mb-1">William Wordsworth</h4>
+                                <p class="text-gray-600 text-sm">Born in Cockermouth; lived at Dove Cottage, Grasmere. A central figure of the Romantic movement.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4 bg-gray-50 p-6 rounded-2xl">
+                            <i data-lucide="book-open" class="w-8 h-8 text-lake-500 shrink-0 mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-gray-900 mb-1">Beatrix Potter</h4>
+                                <p class="text-gray-600 text-sm">Author of <em>The Tale of Peter Rabbit</em>; her home Hill Top in Near Sawrey is managed by the National Trust.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4 bg-gray-50 p-6 rounded-2xl">
+                            <i data-lucide="book-open" class="w-8 h-8 text-lake-500 shrink-0 mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-gray-900 mb-1">Samuel Taylor Coleridge &amp; John Ruskin</h4>
+                                <p class="text-gray-600 text-sm">Among the many artists and poets inspired by the landscape of the Lake District.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <footer class="bg-lake-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <i data-lucide="mountain-snow" class="w-8 h-8 text-lake-400"></i>
+                        <h4 class="text-2xl font-bold font-display">Lake District NP</h4>
+                    </div>
+                    <p class="text-lake-100/70 leading-relaxed">England's most beautiful national park, a UNESCO World Heritage site.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6 font-display">Explore</h4>
+                    <ul class="space-y-3 text-lake-100/70">
+                        <li><a href="index.html" class="hover:text-white transition-colors flex items-center gap-2"><i data-lucide="chevron-right" class="w-4 h-4"></i>Home</a></li>
+                        <li><a href="about.html" class="hover:text-white transition-colors flex items-center gap-2"><i data-lucide="chevron-right" class="w-4 h-4"></i>About Us</a></li>
+                        <li><a href="gallery.html" class="hover:text-white transition-colors flex items-center gap-2"><i data-lucide="chevron-right" class="w-4 h-4"></i>Gallery</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6 font-display">Activities</h4>
+                    <ul class="space-y-3 text-lake-100/70">
+                        <li><a href="activities.html" class="hover:text-white transition-colors flex items-center gap-2"><i data-lucide="chevron-right" class="w-4 h-4"></i>Hiking &amp; Walking</a></li>
+                        <li><a href="activities.html" class="hover:text-white transition-colors flex items-center gap-2"><i data-lucide="chevron-right" class="w-4 h-4"></i>Water Sports</a></li>
+                        <li><a href="activities.html" class="hover:text-white transition-colors flex items-center gap-2"><i data-lucide="chevron-right" class="w-4 h-4"></i>Cycling Routes</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6 font-display">Contact Info</h4>
+                    <ul class="space-y-4 text-lake-100/70">
+                        <li class="flex items-start gap-3"><i data-lucide="mail" class="w-5 h-5 text-lake-400 mt-0.5"></i>info@lakedistrict.gov.uk</li>
+                        <li class="flex items-start gap-3"><i data-lucide="phone" class="w-5 h-5 text-lake-400 mt-0.5"></i>+44 1539 724555</li>
+                        <li class="flex items-start gap-3"><i data-lucide="map-pin" class="w-5 h-5 text-lake-400 mt-0.5"></i>Brockhole, Windermere, UK</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-lake-800 mt-12 pt-8 text-center text-lake-100/50 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p>&copy; 2026 Lake District National Park. All rights reserved.</p>
+                <div class="flex gap-4">
+                    <a href="#" class="hover:text-white transition-colors"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+                    <a href="#" class="hover:text-white transition-colors"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                    <a href="#" class="hover:text-white transition-colors"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>

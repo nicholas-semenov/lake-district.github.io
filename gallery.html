@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        display: ['Montserrat', 'sans-serif'],
+                        body: ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        'lake': {
+                            50: '#f0f9f4',
+                            100: '#d8f0e3',
+                            200: '#b3e0c8',
+                            300: '#7dc8a3',
+                            400: '#4aab7d',
+                            500: '#2d8b5e',
+                            600: '#1e6f4a',
+                            700: '#18593b',
+                            800: '#144730',
+                            900: '#103828',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Gallery | Lake District National Park</title>
+</head>
+<body class="font-body bg-gray-50">
+    
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white/10 backdrop-blur-sm border-b border-white/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex items-center space-x-3 group">
+                    <div class="w-12 h-12 bg-lake-500 rounded-xl flex items-center justify-center transform group-hover:scale-105 transition-transform">
+                        <i data-lucide="mountain-snow" class="w-7 h-7 text-white"></i>
+                    </div>
+                    <span class="text-2xl font-bold text-white font-display tracking-wide">Lake District</span>
+                </a>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-200 hover:text-white transition-colors duration-200 font-medium">Home</a>
+<a href="about.html" class="text-gray-200 hover:text-white transition-colors duration-200 font-medium">About</a>
+<a href="activities.html" class="text-gray-200 hover:text-white transition-colors duration-200 font-medium">Activities</a>
+<a href="gallery.html" class="text-lake-400 transition-colors duration-200 font-medium">Gallery</a>
+<a href="contact.html" class="text-gray-200 hover:text-white transition-colors duration-200 font-medium">Plan Visit</a>
+
+                    <a href="contact.html" class="bg-lake-500 hover:bg-lake-600 text-white px-7 py-2.5 rounded-full font-medium transition-all duration-200 transform hover:scale-105 shadow-lg shadow-lake-500/30">
+                        Contact Us
+                    </a>
+                </div>
+
+                <button id="mobile-menu-btn" class="md:hidden text-white hover:text-lake-300 transition-colors">
+                    <i data-lucide="menu" class="w-8 h-8"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-2xl absolute w-full left-0 border-t border-gray-100">
+            <div class="px-4 py-4 space-y-2">
+                <a href="index.html" class="block px-4 py-3 rounded-lg text-gray-800 hover:text-lake-600 hover:bg-gray-50 transition-colors">Home</a>
+<a href="about.html" class="block px-4 py-3 rounded-lg text-gray-800 hover:text-lake-600 hover:bg-gray-50 transition-colors">About</a>
+<a href="activities.html" class="block px-4 py-3 rounded-lg text-gray-800 hover:text-lake-600 hover:bg-gray-50 transition-colors">Activities</a>
+<a href="gallery.html" class="block px-4 py-3 rounded-lg text-lake-600 font-bold bg-lake-50 transition-colors">Gallery</a>
+<a href="contact.html" class="block px-4 py-3 rounded-lg text-gray-800 hover:text-lake-600 hover:bg-gray-50 transition-colors">Plan Visit</a>
+
+                <a href="contact.html" class="block text-center w-full bg-lake-500 hover:bg-lake-600 text-white px-4 py-3 rounded-xl font-medium transition-colors mt-4 shadow-md">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </nav>
+    
+
+    <section class="relative h-[45vh] flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="images/gal-windermere.jpg" alt="Panoramic view of Ambleside and Windermere in autumn from the surrounding fells, Lake District" class="w-full h-full object-cover">
+            <div class="absolute inset-0 hero-gradient"></div>
+            <div class="absolute inset-0 bg-black/30"></div>
+        </div>
+        <div class="relative z-10 text-center text-white px-4 mt-20" data-aos="fade-up">
+            <h1 class="text-5xl md:text-6xl font-display font-bold mb-4 drop-shadow-lg">Visual Journey</h1>
+            <p class="text-xl text-white font-light drop-shadow-lg">Capturing the untamed beauty of England's finest landscape.</p>
+        </div>
+    </section>
+
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+
+                <div class="gallery-item rounded-2xl shadow-sm aspect-square bg-gray-200" data-aos="zoom-in" data-aos-delay="0">
+                    <img src="images/gal-windermere.jpg" alt="Panoramic autumn view of Ambleside and Windermere from the surrounding fells, Cumbria" class="w-full h-full object-cover">
+                    <div class="overlay flex flex-col justify-end">
+                        <div class="w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center mb-2">
+                            <i data-lucide="maximize-2" class="w-4 h-4 text-white"></i>
+                        </div>
+                        <p class="text-white font-display font-bold text-lg">Windermere Panorama</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item rounded-2xl shadow-sm aspect-square bg-gray-200" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="images/gal-scafell.jpg" alt="Summit trig point on Scafell Pike — England's highest mountain at 978 metres, Lake District" class="w-full h-full object-cover">
+                    <div class="overlay flex flex-col justify-end">
+                        <div class="w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center mb-2">
+                            <i data-lucide="maximize-2" class="w-4 h-4 text-white"></i>
+                        </div>
+                        <p class="text-white font-display font-bold text-lg">Scafell Pike Summit (978 m)</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item rounded-2xl shadow-sm aspect-square bg-gray-200" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="images/gal-ullswater.jpg" alt="Ullswater looking south with green fells on both sides and a sailing boat in the distance" class="w-full h-full object-cover">
+                    <div class="overlay flex flex-col justify-end">
+                        <div class="w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center mb-2">
+                            <i data-lucide="maximize-2" class="w-4 h-4 text-white"></i>
+                        </div>
+                        <p class="text-white font-display font-bold text-lg">Ullswater</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item rounded-2xl shadow-sm aspect-square bg-gray-200" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="images/gal-sheep.jpg" alt="Herdwick sheep on a fell slope in the Lake District — the traditional breed of Cumbria" class="w-full h-full object-cover">
+                    <div class="overlay flex flex-col justify-end">
+                        <div class="w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center mb-2">
+                            <i data-lucide="maximize-2" class="w-4 h-4 text-white"></i>
+                        </div>
+                        <p class="text-white font-display font-bold text-lg">Herdwick Sheep</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item rounded-2xl shadow-sm aspect-square bg-gray-200" data-aos="zoom-in" data-aos-delay="0">
+                    <img src="images/act-water.jpg" alt="Kayaker on Lake Windermere with wooded hillside and fells in the background" class="w-full h-full object-cover">
+                    <div class="overlay flex flex-col justify-end">
+                        <div class="w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center mb-2">
+                            <i data-lucide="maximize-2" class="w-4 h-4 text-white"></i>
+                        </div>
+                        <p class="text-white font-display font-bold text-lg">Kayaking on Windermere</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item rounded-2xl shadow-sm aspect-square bg-gray-200" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="images/gal-forest.jpg" alt="Morning light filtering through pine trees in Whinlatter Forest, near Keswick" class="w-full h-full object-cover">
+                    <div class="overlay flex flex-col justify-end">
+                        <div class="w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center mb-2">
+                            <i data-lucide="maximize-2" class="w-4 h-4 text-white"></i>
+                        </div>
+                        <p class="text-white font-display font-bold text-lg">Whinlatter Forest</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item rounded-2xl shadow-sm aspect-square bg-gray-200" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="images/gal-cottage.jpg" alt="Dove Cottage in Grasmere — former home of the Romantic poet William Wordsworth" class="w-full h-full object-cover">
+                    <div class="overlay flex flex-col justify-end">
+                        <div class="w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center mb-2">
+                            <i data-lucide="maximize-2" class="w-4 h-4 text-white"></i>
+                        </div>
+                        <p class="text-white font-display font-bold text-lg">Dove Cottage, Grasmere</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item rounded-2xl shadow-sm aspect-square bg-gray-200" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="images/gal-wastwater.jpg" alt="Wastwater — England's deepest lake at 74 metres, reflecting Yewbarrow and Kirk Fell" class="w-full h-full object-cover">
+                    <div class="overlay flex flex-col justify-end">
+                        <div class="w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center mb-2">
+                            <i data-lucide="maximize-2" class="w-4 h-4 text-white"></i>
+                        </div>
+                        <p class="text-white font-display font-bold text-lg">Wastwater — England's Deepest Lake</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item rounded-2xl shadow-sm aspect-square bg-gray-200" data-aos="zoom-in" data-aos-delay="0">
+                    <img src="images/hero-contact.jpg" alt="Derwentwater at dusk near Keswick — one of the most scenic lakes in the Lake District" class="w-full h-full object-cover">
+                    <div class="overlay flex flex-col justify-end">
+                        <div class="w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center mb-2">
+                            <i data-lucide="maximize-2" class="w-4 h-4 text-white"></i>
+                        </div>
+                        <p class="text-white font-display font-bold text-lg">Derwentwater, Keswick</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item rounded-2xl shadow-sm aspect-square bg-gray-200" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="images/gal-kayak.jpg" alt="Group kayaking lesson on a lake in the Lake District — water sports are popular at Windermere and Derwentwater" class="w-full h-full object-cover">
+                    <div class="overlay flex flex-col justify-end">
+                        <div class="w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center mb-2">
+                            <i data-lucide="maximize-2" class="w-4 h-4 text-white"></i>
+                        </div>
+                        <p class="text-white font-display font-bold text-lg">Group Kayaking</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item rounded-2xl shadow-sm aspect-square bg-gray-200" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="images/hero-about.jpg" alt="Ullswater stretching into the distance with steep fell slopes on both sides, Lake District" class="w-full h-full object-cover">
+                    <div class="overlay flex flex-col justify-end">
+                        <div class="w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center mb-2">
+                            <i data-lucide="maximize-2" class="w-4 h-4 text-white"></i>
+                        </div>
+                        <p class="text-white font-display font-bold text-lg">Ullswater Valley</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item rounded-2xl shadow-sm aspect-square bg-gray-200" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="images/gal-helvellyn.jpg" alt="Panoramic view from Striding Edge on Helvellyn — one of the most famous ridge walks in England" class="w-full h-full object-cover">
+                    <div class="overlay flex flex-col justify-end">
+                        <div class="w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center mb-2">
+                            <i data-lucide="maximize-2" class="w-4 h-4 text-white"></i>
+                        </div>
+                        <p class="text-white font-display font-bold text-lg">Helvellyn — Striding Edge</p>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="mt-24 text-center max-w-4xl mx-auto" data-aos="fade-up">
+                <h2 class="text-3xl font-display font-bold text-gray-900 mb-8">Experience the Lakes</h2>
+                <div class="aspect-video rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
+                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/4kaiNhj0aHM" title="Lake District — Experience the Lakes" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <!-- Photo Attribution -->
+            <div class="mt-20 max-w-4xl mx-auto" data-aos="fade-up">
+                <h2 class="text-2xl font-display font-bold text-gray-900 mb-6">Photo Credits</h2>
+                <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+                    <table class="w-full text-sm text-gray-600">
+                        <thead class="bg-lake-50 text-lake-800 font-semibold">
+                            <tr>
+                                <th class="text-left px-6 py-4">Description</th>
+                                <th class="text-left px-6 py-4">Photographer</th>
+                                <th class="text-left px-6 py-4">Source</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-100">
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-3">Windermere Panorama (Ambleside)</td>
+                                <td class="px-6 py-3">Diliff</td>
+                                <td class="px-6 py-3">Wikimedia Commons — CC BY-SA 3.0</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-3">Scafell Pike Summit (978 m)</td>
+                                <td class="px-6 py-3">Geograph contributor</td>
+                                <td class="px-6 py-3">Wikimedia Commons — CC BY-SA 2.0</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-3">Ullswater</td>
+                                <td class="px-6 py-3">Diliff</td>
+                                <td class="px-6 py-3">Wikimedia Commons — CC BY-SA 3.0</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-3">Herdwick Sheep, Kirk Fell</td>
+                                <td class="px-6 py-3">Wikimedia Commons contributor</td>
+                                <td class="px-6 py-3">Wikimedia Commons — CC BY-SA 4.0</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-3">Kayaking on Lake Windermere</td>
+                                <td class="px-6 py-3">Geograph contributor</td>
+                                <td class="px-6 py-3">Wikimedia Commons — CC BY-SA 2.0</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-3">Whinlatter Forest — pine trees</td>
+                                <td class="px-6 py-3">Unsplash photographer</td>
+                                <td class="px-6 py-3">Unsplash Licence (free to use)</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-3">Dove Cottage, Grasmere</td>
+                                <td class="px-6 py-3">Wikimedia Commons contributor</td>
+                                <td class="px-6 py-3">Wikimedia Commons — CC BY-SA 3.0</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-3">Wastwater — England's deepest lake</td>
+                                <td class="px-6 py-3">Geograph contributor</td>
+                                <td class="px-6 py-3">Wikimedia Commons — CC BY-SA 2.0</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-3">Derwentwater, Keswick</td>
+                                <td class="px-6 py-3">Diliff</td>
+                                <td class="px-6 py-3">Wikimedia Commons — CC BY-SA 3.0</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-3">Helvellyn — Striding Edge panorama</td>
+                                <td class="px-6 py-3">Wikimedia Commons contributor</td>
+                                <td class="px-6 py-3">Wikimedia Commons — CC BY-SA 3.0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="fixed inset-0 z-[100] bg-black/95 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300 flex items-center justify-center">
+        <button id="close-lightbox" class="absolute top-6 right-6 text-white/50 hover:text-white transition-colors">
+            <i data-lucide="x" class="w-10 h-10"></i>
+        </button>
+        <img id="lightbox-img" src="" alt="Enlarged photo from the Lake District gallery" class="max-w-[90vw] max-h-[90vh] object-contain rounded-lg shadow-2xl transform scale-95 transition-transform duration-300">
+    </div>
+
+    
+    <footer class="bg-lake-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <i data-lucide="mountain-snow" class="w-8 h-8 text-lake-400"></i>
+                        <h4 class="text-2xl font-bold font-display">Lake District NP</h4>
+                    </div>
+                    <p class="text-lake-100/70 leading-relaxed">England's most beautiful national park, a UNESCO World Heritage site.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6 font-display">Explore</h4>
+                    <ul class="space-y-3 text-lake-100/70">
+                        <li><a href="index.html" class="hover:text-white transition-colors flex items-center gap-2"><i data-lucide="chevron-right" class="w-4 h-4"></i>Home</a></li>
+                        <li><a href="about.html" class="hover:text-white transition-colors flex items-center gap-2"><i data-lucide="chevron-right" class="w-4 h-4"></i>About Us</a></li>
+                        <li><a href="gallery.html" class="hover:text-white transition-colors flex items-center gap-2"><i data-lucide="chevron-right" class="w-4 h-4"></i>Gallery</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6 font-display">Activities</h4>
+                    <ul class="space-y-3 text-lake-100/70">
+                        <li><a href="activities.html" class="hover:text-white transition-colors flex items-center gap-2"><i data-lucide="chevron-right" class="w-4 h-4"></i>Hiking &amp; Walking</a></li>
+                        <li><a href="activities.html" class="hover:text-white transition-colors flex items-center gap-2"><i data-lucide="chevron-right" class="w-4 h-4"></i>Water Sports</a></li>
+                        <li><a href="activities.html" class="hover:text-white transition-colors flex items-center gap-2"><i data-lucide="chevron-right" class="w-4 h-4"></i>Cycling Routes</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6 font-display">Contact Info</h4>
+                    <ul class="space-y-4 text-lake-100/70">
+                        <li class="flex items-start gap-3"><i data-lucide="mail" class="w-5 h-5 text-lake-400 mt-0.5"></i>info@lakedistrict.gov.uk</li>
+                        <li class="flex items-start gap-3"><i data-lucide="phone" class="w-5 h-5 text-lake-400 mt-0.5"></i>+44 1539 724555</li>
+                        <li class="flex items-start gap-3"><i data-lucide="map-pin" class="w-5 h-5 text-lake-400 mt-0.5"></i>Brockhole, Windermere, UK</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-lake-800 mt-12 pt-8 text-center text-lake-100/50 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p>&copy; 2026 Lake District National Park. All rights reserved.</p>
+                <div class="flex gap-4">
+                    <a href="#" class="hover:text-white transition-colors"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+                    <a href="#" class="hover:text-white transition-colors"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                    <a href="#" class="hover:text-white transition-colors"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>

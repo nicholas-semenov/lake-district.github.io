@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        display: ['Montserrat', 'sans-serif'],
+                        body: ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        'lake': {
+                            50: '#f0f9f4',
+                            100: '#d8f0e3',
+                            200: '#b3e0c8',
+                            300: '#7dc8a3',
+                            400: '#4aab7d',
+                            500: '#2d8b5e',
+                            600: '#1e6f4a',
+                            700: '#18593b',
+                            800: '#144730',
+                            900: '#103828',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Plan Visit | Lake District National Park</title>
+</head>
+<body class="font-body bg-gray-50">
+    
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white/10 backdrop-blur-sm border-b border-white/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex items-center space-x-3 group">
+                    <div class="w-12 h-12 bg-lake-500 rounded-xl flex items-center justify-center transform group-hover:scale-105 transition-transform">
+                        <i data-lucide="mountain-snow" class="w-7 h-7 text-white"></i>
+                    </div>
+                    <span class="text-2xl font-bold text-white font-display tracking-wide">Lake District</span>
+                </a>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-200 hover:text-white transition-colors duration-200 font-medium">Home</a>
+<a href="about.html" class="text-gray-200 hover:text-white transition-colors duration-200 font-medium">About</a>
+<a href="activities.html" class="text-gray-200 hover:text-white transition-colors duration-200 font-medium">Activities</a>
+<a href="gallery.html" class="text-gray-200 hover:text-white transition-colors duration-200 font-medium">Gallery</a>
+<a href="contact.html" class="text-lake-400 transition-colors duration-200 font-medium">Plan Visit</a>
+
+                    <a href="contact.html" class="bg-lake-500 hover:bg-lake-600 text-white px-7 py-2.5 rounded-full font-medium transition-all duration-200 transform hover:scale-105 shadow-lg shadow-lake-500/30">
+                        Contact Us
+                    </a>
+                </div>
+
+                <button id="mobile-menu-btn" class="md:hidden text-white hover:text-lake-300 transition-colors">
+                    <i data-lucide="menu" class="w-8 h-8"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-2xl absolute w-full left-0 border-t border-gray-100">
+            <div class="px-4 py-4 space-y-2">
+                <a href="index.html" class="block px-4 py-3 rounded-lg text-gray-800 hover:text-lake-600 hover:bg-gray-50 transition-colors">Home</a>
+<a href="about.html" class="block px-4 py-3 rounded-lg text-gray-800 hover:text-lake-600 hover:bg-gray-50 transition-colors">About</a>
+<a href="activities.html" class="block px-4 py-3 rounded-lg text-gray-800 hover:text-lake-600 hover:bg-gray-50 transition-colors">Activities</a>
+<a href="gallery.html" class="block px-4 py-3 rounded-lg text-gray-800 hover:text-lake-600 hover:bg-gray-50 transition-colors">Gallery</a>
+<a href="contact.html" class="block px-4 py-3 rounded-lg text-lake-600 font-bold bg-lake-50 transition-colors">Plan Visit</a>
+
+                <a href="contact.html" class="block text-center w-full bg-lake-500 hover:bg-lake-600 text-white px-4 py-3 rounded-xl font-medium transition-colors mt-4 shadow-md">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </nav>
+    
+
+    <section class="relative h-[50vh] flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="images/hero-contact.jpg" alt="Derwentwater near Keswick at evening, with Catbells and surrounding fells reflecting in the calm lake" class="w-full h-full object-cover">
+            <div class="absolute inset-0 hero-gradient opacity-80"></div>
+        </div>
+        <div class="relative z-10 text-center text-white px-4 mt-20" data-aos="fade-up">
+            <h1 class="text-5xl md:text-6xl font-display font-bold mb-4 drop-shadow-lg">Plan Your Visit</h1>
+            <p class="text-xl text-white font-light max-w-2xl mx-auto drop-shadow-lg">Everything you need to know before your adventure begins.</p>
+        </div>
+    </section>
+
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- Info Column -->
+                <div class="lg:col-span-5 space-y-8" data-aos="fade-right">
+                    <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100">
+                        <h3 class="text-2xl font-display font-bold mb-6 text-gray-900">Getting Here</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 rounded-xl bg-lake-50 text-lake-600 flex items-center justify-center shrink-0">
+                                    <i data-lucide="car" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900">By Car</h4>
+                                    <p class="text-gray-600 text-sm mt-1">Access via the M6 motorway, exit at junctions 36–40 depending on your destination. Many roads within the park are narrow and can become congested during peak season.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 rounded-xl bg-lake-50 text-lake-600 flex items-center justify-center shrink-0">
+                                    <i data-lucide="train" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900">By Train</h4>
+                                    <p class="text-gray-600 text-sm mt-1">The West Coast mainline serves the park, with stops at Oxenholme (for Windermere) and Penrith (for the northern lakes and Ullswater). Local bus services connect stations to villages and visitor centres.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 rounded-xl bg-lake-50 text-lake-600 flex items-center justify-center shrink-0">
+                                    <i data-lucide="bus" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900">By Bus</h4>
+                                    <p class="text-gray-600 text-sm mt-1">Several bus services operate within the park, including the "Rambler" and "Coniston Rambler" routes, linking key visitor sites. Using public transport is encouraged to reduce congestion.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Visitor Information Centres -->
+                    <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100">
+                        <h3 class="text-2xl font-display font-bold mb-6 text-gray-900">Visitor Information Centres</h3>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-sm text-gray-600">
+                                <thead class="bg-lake-50 text-lake-800 font-semibold">
+                                    <tr>
+                                        <th class="text-left px-4 py-3 rounded-tl-xl">Centre</th>
+                                        <th class="text-left px-4 py-3">Apr–Oct</th>
+                                        <th class="text-left px-4 py-3 rounded-tr-xl">Nov–Mar</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-gray-100">
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="px-4 py-3 font-medium text-gray-800">Bowness on Windermere</td>
+                                        <td class="px-4 py-3">Mon–Sun, 9:30am–5:30pm</td>
+                                        <td class="px-4 py-3">Mon–Sun, 10am–4:30pm</td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="px-4 py-3 font-medium text-gray-800">Keswick (Moot Hall)</td>
+                                        <td class="px-4 py-3">Mon–Sun, 9:30am–5:30pm</td>
+                                        <td class="px-4 py-3">Mon–Sun, 9:30am–4:30pm</td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="px-4 py-3 font-medium text-gray-800">Ullswater (Glenridding)</td>
+                                        <td class="px-4 py-3">Mon–Sun, 9:30am–5:30pm</td>
+                                        <td class="px-4 py-3">Sat–Sun, 9:30am–3:30pm</td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="px-4 py-3 font-medium text-gray-800">Hawkshead</td>
+                                        <td class="px-4 py-3">Mon–Sun, 9:30am–4:30pm</td>
+                                        <td class="px-4 py-3">Seasonal — check website</td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="px-4 py-3 font-medium text-gray-800">Brockhole on Windermere</td>
+                                        <td class="px-4 py-3">Varies — check website</td>
+                                        <td class="px-4 py-3">Varies — check website</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p class="text-xs text-gray-400 mt-3">All centres offer free WiFi, maps, guides, and local advice.</p>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-lake-600 to-lake-800 p-8 rounded-3xl shadow-lg text-white">
+                        <h3 class="text-2xl font-display font-bold mb-6">Current Conditions</h3>
+                        <div id="weather-widget" class="flex items-center space-x-6">
+                            <i id="weather-icon" data-lucide="loader" class="w-16 h-16 text-lake-200 animate-spin"></i>
+                            <div>
+                                <p id="weather-temp" class="text-5xl font-bold font-display">--°C</p>
+                                <p id="weather-desc" class="text-lake-100 mt-1 font-medium">Loading forecast…</p>
+                            </div>
+                        </div>
+                        <div class="mt-6 pt-6 border-t border-lake-500/30 text-sm text-lake-100">
+                            <p><i data-lucide="alert-triangle" class="w-4 h-4 inline mr-1 mb-0.5"></i> Always check mountain weather forecasts before hiking.</p>
+                            <p class="text-xs text-lake-200/70 mt-2">Live weather for Windermere via <a href="https://open-meteo.com/" target="_blank" rel="noopener" class="underline hover:text-white">Open-Meteo</a>.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Column -->
+                <div class="lg:col-span-7" data-aos="fade-left">
+                    <div class="bg-white p-10 rounded-3xl shadow-xl border border-gray-100">
+                        <h3 class="text-3xl font-display font-bold mb-2 text-gray-900">Send an Enquiry</h3>
+                        <p class="text-gray-600 mb-8">Have a question? Drop us a message and our visitor team will help.</p>
+                        
+                        <form class="space-y-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div class="space-y-2">
+                                    <label class="text-sm font-bold text-gray-700">First Name</label>
+                                    <input type="text" class="w-full px-5 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-lake-500 focus:ring-2 focus:ring-lake-200 transition-all" placeholder="John">
+                                </div>
+                                <div class="space-y-2">
+                                    <label class="text-sm font-bold text-gray-700">Last Name</label>
+                                    <input type="text" class="w-full px-5 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-lake-500 focus:ring-2 focus:ring-lake-200 transition-all" placeholder="Doe">
+                                </div>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-sm font-bold text-gray-700">Email Address</label>
+                                <input type="email" class="w-full px-5 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-lake-500 focus:ring-2 focus:ring-lake-200 transition-all" placeholder="john@example.com">
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-sm font-bold text-gray-700">Your Message</label>
+                                <textarea rows="5" class="w-full px-5 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-lake-500 focus:ring-2 focus:ring-lake-200 transition-all custom-scrollbar" placeholder="How can we help plan your visit?"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-lake-500 hover:bg-lake-600 text-white font-bold text-lg py-4 rounded-xl transition-all duration-300 transform hover:-translate-y-1 shadow-lg shadow-lake-500/30">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    
+    <footer class="bg-lake-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <i data-lucide="mountain-snow" class="w-8 h-8 text-lake-400"></i>
+                        <h4 class="text-2xl font-bold font-display">Lake District NP</h4>
+                    </div>
+                    <p class="text-lake-100/70 leading-relaxed">England's most beautiful national park, a UNESCO World Heritage site.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6 font-display">Explore</h4>
+                    <ul class="space-y-3 text-lake-100/70">
+                        <li><a href="index.html" class="hover:text-white transition-colors flex items-center gap-2"><i data-lucide="chevron-right" class="w-4 h-4"></i>Home</a></li>
+                        <li><a href="about.html" class="hover:text-white transition-colors flex items-center gap-2"><i data-lucide="chevron-right" class="w-4 h-4"></i>About Us</a></li>
+                        <li><a href="gallery.html" class="hover:text-white transition-colors flex items-center gap-2"><i data-lucide="chevron-right" class="w-4 h-4"></i>Gallery</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6 font-display">Activities</h4>
+                    <ul class="space-y-3 text-lake-100/70">
+                        <li><a href="activities.html" class="hover:text-white transition-colors flex items-center gap-2"><i data-lucide="chevron-right" class="w-4 h-4"></i>Hiking &amp; Walking</a></li>
+                        <li><a href="activities.html" class="hover:text-white transition-colors flex items-center gap-2"><i data-lucide="chevron-right" class="w-4 h-4"></i>Water Sports</a></li>
+                        <li><a href="activities.html" class="hover:text-white transition-colors flex items-center gap-2"><i data-lucide="chevron-right" class="w-4 h-4"></i>Cycling Routes</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6 font-display">Contact Info</h4>
+                    <ul class="space-y-4 text-lake-100/70">
+                        <li class="flex items-start gap-3"><i data-lucide="mail" class="w-5 h-5 text-lake-400 mt-0.5"></i>info@lakedistrict.gov.uk</li>
+                        <li class="flex items-start gap-3"><i data-lucide="phone" class="w-5 h-5 text-lake-400 mt-0.5"></i>+44 1539 724555</li>
+                        <li class="flex items-start gap-3"><i data-lucide="map-pin" class="w-5 h-5 text-lake-400 mt-0.5"></i>Brockhole, Windermere, UK</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-lake-800 mt-12 pt-8 text-center text-lake-100/50 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p>&copy; 2026 Lake District National Park. All rights reserved.</p>
+                <div class="flex gap-4">
+                    <a href="#" class="hover:text-white transition-colors"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+                    <a href="#" class="hover:text-white transition-colors"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                    <a href="#" class="hover:text-white transition-colors"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>
